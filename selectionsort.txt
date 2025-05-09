@@ -1,0 +1,16 @@
+def selectionsort(a):
+    for i in range (len(a)-1):
+        mini=i
+        
+        for j in range (i,len(a)):
+            
+            if a[mini]>a[j]:
+                mini=j
+                
+        a[i],a[mini]=a[mini],a[i]    
+        
+a=[5,2,3,6,1]
+
+selectionsort(a)
+
+print(a)

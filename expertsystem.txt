@@ -1,0 +1,36 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string fever, cough, pain;
+
+    cout << "🏥 Simple Medical Expert System\n";
+    cout << "Answer with yes or no.\n";
+
+    cout << "Do you have fever? ";
+    cin >> fever;
+
+    cout << "Do you have cough? ";
+    cin >> cough;
+
+    cout << "Do you have body pain? ";
+    cin >> pain;
+
+    cout << "\n📋 Diagnosis Suggestion:\n";
+
+    if (fever == "yes" && cough == "yes") {
+        cout << "You may have a cold or flu.\n";
+    }
+    else if (fever == "yes" && pain == "yes") {
+        cout << "You may have viral fever.\n";
+    }
+    else if (fever == "no" && cough == "yes") {
+        cout << "You may have throat irritation or allergy.\n";
+    }
+    else {
+        cout << "No major symptoms detected. Stay healthy!\n";
+    }
+
+    return 0;
+}

@@ -1,0 +1,74 @@
+def welcome():
+    print("****Welcome to food shop******")
+    
+def info():
+    global name
+    name=input("can i know your good name:")
+    
+    print("hey"+name+",good to see you here!")
+    print("you are on right place ,i will help you book your dish")
+    
+def menu():
+    print('''here is our menu card 
+    1.Pizza Rs 200
+    2.Mango Juice Rs 80
+    3.Apple juice Rs 50''')
+    
+def order(price,product):
+    print("thank you for chossing"+product)
+    print("please provide us additional information:")
+    mob=input("enter your mobile number:")
+    add=input("enter your address:")
+    print('''choose payment method
+    1.online
+    2.COD''')
+    
+    pay=input()
+    paymode=""
+    if(pay=="2"):
+        paymode="COD"
+        
+    print("here is detail of selected order")
+    print("customer name:"+name)
+    print("product name:"+product)
+    print("price of product:"+str(price))
+    print("mode of payment:"+paymode)
+    print("delivery address:"+add)
+    
+    b=input("pleaasse confirm by pressing 1 else 0 to cancel:")
+    
+    if(b=="1"):
+        print("Order Booked Successfully!!!")
+        print("customer name:"+name)
+        print("product name:"+product)
+        print("price of product:"+str(price))
+        print("mode of payment:"+paymode)
+        print("delivery address:"+add)
+        print("Thank you for your interest !!! Have a nice day !!!")
+    else:
+        print("*****Thank you for visit !!!! Have a nice day !!! *****")
+
+def choice():
+    print("select product:")
+    price=0
+    a=input()
+    if(a.lower()=="pizza"):
+        price=200
+        order(price,a)
+    elif(a.lower()=="Mango Juice"):
+        price=80
+        order(price,a)
+        
+    elif(a.lower()=="Apple Juice"):
+        price=50
+        order(price,a)
+        
+    else:
+        print("You have not selected any product....Thank you for visit !!!! Have a nice day")
+        
+
+welcome()
+info()
+menu()
+choice()
+    
